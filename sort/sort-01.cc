@@ -6,12 +6,12 @@
 
 using namespace std;
 
-void selectSort(int arr[], int n) 
+void selectSort(int arr[], int n)
 {
 	for (int i = 0; i < n; i++) {
 		int minIndex = i;
 
-		for (int t = i; t < n; t++) 
+		for (int t = i; t < n; t++)
 			if (arr[t] < arr[minIndex])
 				minIndex = t;
 
@@ -25,7 +25,7 @@ int main()
 	selectSort(arr, 5);
 
 	for (int i = 0; i < 5; i++) {
-		cout << arr[i];
+		cout << arr[i] << " ";
 	}
 
 	cout << endl;
