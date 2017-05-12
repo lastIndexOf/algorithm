@@ -6,7 +6,8 @@
 
 using namespace std;
 
-void selectSort(int arr[], int n)
+template <typename T>
+void selectSort(T arr[], int n)
 {
 	for (int i = 0; i < n; i++) {
 		int minIndex = i;
@@ -26,6 +27,15 @@ int main()
 
 	for (int i = 0; i < 5; i++) {
 		cout << arr[i] << " ";
+	}
+
+	cout << endl;
+
+	float arr2[5] = {5.2, 4.1, 3.3, 2.5, 1.1};
+	selectSort(arr2, 5);
+
+	for (int i = 0; i < 5; i++) {
+		cout << arr2[i] << " ";
 	}
 
 	cout << endl;

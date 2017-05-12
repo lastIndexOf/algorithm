@@ -15,7 +15,7 @@ const selectSort = arr => {
 
   selectSort(arr)
 
-  for (item of arr)
+  for (let item of arr)
     process.stdout.write(item + ' ')
 
   console.log('')
