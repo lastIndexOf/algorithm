@@ -3,6 +3,7 @@
 */
 
 #include <iostream>
+#include "sortTest.h"
 
 using namespace std;
 
@@ -22,22 +23,15 @@ void selectSort(T arr[], int n)
 
 int main()
 {
-	int arr[5] = {5, 4, 3, 2, 1};
-	selectSort(arr, 5);
+	int n = 10000;
 
-	for (int i = 0; i < 5; i++) {
-		cout << arr[i] << " ";
-	}
+	int *arr = sortTest::generateRandomArray(n, 0, n);
+	selectSort(arr, n);
 
-	cout << endl;
-
-	float arr2[5] = {5.2, 4.1, 3.3, 2.5, 1.1};
-	selectSort(arr2, 5);
-
-	for (int i = 0; i < 5; i++) {
-		cout << arr2[i] << " ";
-	}
+	sortTest::printArr(arr, n);
 
 	cout << endl;
+
+	delete[] arr;
 	return 0;
 }

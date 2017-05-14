@@ -1,3 +1,6 @@
+const
+  sortTest = require('./sortTest.js')
+
 const selectSort = arr => {
   for (let i = 0, len = arr.length; i < len; i++) {
     let minIndex = i
@@ -11,12 +14,11 @@ const selectSort = arr => {
 }
 
 ;(function main() {
-  let arr = [8, 7, 6, 5, 4, 3, 2, 1]
+  let arr = sortTest.generateRandomArray(10000, 5000, 10000)
 
   selectSort(arr)
 
-  for (let item of arr)
-    process.stdout.write(item + ' ')
+  sortTest.printArr(arr)
 
   console.log('')
 })()
